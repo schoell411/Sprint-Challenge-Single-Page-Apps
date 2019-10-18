@@ -5,17 +5,13 @@ import SearchForm from "./SearchForm";
 import styled from "styled-components";
 
 export default function CharacterList() {
+
   const CharacterContainer = styled.div`
-    margin: 1rem;
+    margin: 1rem auto;
     display: flex;
     justify-content: center;
-    font-size: 2rem;
-    color: green;
     background-color: papayawhip;
-    img {
-      min-width: 100%;
-      max-width: 100%;
-    }
+    width: 60%;
   `;
 
   const [characters, setCharacters] = useState([]);

@@ -37,3 +37,13 @@ main {
 header h1 {
   text-align: center;
 }
+
+.search-form {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+.search-form input {
+  font-size: 2rem;
+}
