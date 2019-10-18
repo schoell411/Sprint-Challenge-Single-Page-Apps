@@ -29,6 +29,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+'Client-side' routing is beneficial because it does not cause the page to create a new network request, and in turn reload the entire page. This creates what is known as a 'Single-Page Application', meaning that to the browser the application is but a single page, but using React router, the user perceives it as multiple pages that they are able to navigate through. This is opposed to 'server-side' routing which would cause a new request with each change, causing a page refresh each time, which can significantly increase the time it takes for the page to load, due to the page having to reload all of the different elements of the page, including headers, footers, navigation, styles, etc.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
