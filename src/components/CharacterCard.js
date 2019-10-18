@@ -21,16 +21,18 @@ const CharacterCard = props => {
   const CharacterName = styled.h1`
     font-size: 4rem;
     color: blue;
-    background-color: white;
+    margin: 1rem;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline;
   `;
   
   const CharacterInfo = styled.p`
     font-size: 2rem;
     color: blue;
-    background-color:white;
     text-align: center;
     margin: .5rem auto;
     width: 50%;
+    font-family: 'Indie Flower', cursive;
   `;
 
   // styles
