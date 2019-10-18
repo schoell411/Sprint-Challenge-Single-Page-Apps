@@ -2,8 +2,22 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import SearchForm from "./SearchForm";
+import styled from "styled-components";
 
 export default function CharacterList() {
+  const CharacterContainer = styled.div`
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: green;
+    background-color: papayawhip;
+    img {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  `;
+
   const [characters, setCharacters] = useState([]);
 
   const [searchCharacter, setSearchCharacter] = useState("");
@@ -15,7 +29,7 @@ export default function CharacterList() {
   useEffect(() => {
     axios.get(`https://rickandmortyapi.com/api/character/`)
     .then(response => {
-      // console.log(response.data);
+      console.log(response.data);
       const characterData = response.data.results.filter(character => character.name.toLowerCase().includes(searchCharacter.toLowerCase()));
       setCharacters(characterData);
     })
@@ -35,6 +49,7 @@ export default function CharacterList() {
     {characters.map((character) => {
         // console.log(characters);
         return (
+          <CharacterContainer>
           <CharacterCard
             key={character.id}
             picture={character.image}
@@ -42,6 +57,7 @@ export default function CharacterList() {
             gender={character.gender}
             species={character.species}
           />
+          </CharacterContainer>
         );
       })}
     </div>
