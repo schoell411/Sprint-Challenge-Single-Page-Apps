@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-
-
 export default function Header() {
   const Header = styled.h1`
     font-size: 3rem;
@@ -25,6 +23,7 @@ export default function Header() {
       padding: 0 1rem;
       font-size: 2rem;
       font-family: 'Long Cang', cursive;
+      color: blue;
     }
   `;
   
@@ -33,8 +32,8 @@ export default function Header() {
     <MainHeader className="ui centered">
       <Header>Rick &amp; Morty Fan Page</Header>
       <Nav>
-        <Link to="/">Home</Link>
-        <Link to="/characters">Character List</Link>
+        <Link to="/"><i class="fas fa-home"></i>Home</Link>
+        <Link to="/characters"><i class="fas fa-user-ninja"></i>Character List</Link>
       </Nav>
     </MainHeader>
   );
